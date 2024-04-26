@@ -1,5 +1,4 @@
 function smallestMissingPositiveInteger(nums) {
-    // Handle the base case where the list is empty
     if (!nums.length) return 1;
 
     const positiveNumbers = new Set();
