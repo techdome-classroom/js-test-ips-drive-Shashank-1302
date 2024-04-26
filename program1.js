@@ -1,6 +1,5 @@
 function smallestMissingPositiveInteger(nums) {
   // Handle empty list case
-  function smallestMissingPositiveInteger(nums) {
     // Handle empty list case directly
     if (nums.length === 0) return 1;
   
