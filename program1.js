@@ -1,5 +1,5 @@
 function smallestMissingPositiveInteger(nums) {
-  const n = arr.length;
+  const n = nums.length;
 
   // Mark the presence of non-negative integers using their indices.
   for (let i = 0; i < n; i++) {
