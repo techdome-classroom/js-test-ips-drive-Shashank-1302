@@ -1,6 +1,5 @@
 function smallestMissingPositiveInteger(nums) {
 
-  function smallestMissingPositiveInteger(nums) {
     const n = nums.length;
     for (let i = 0; i < n; i++) {
       while (0 <= nums[i] < n && nums[i] != i && nums[i] !== 0) {
@@ -18,8 +17,7 @@ function smallestMissingPositiveInteger(nums) {
   
     return n + 1;
   }
-}
-  
+
   
   module.exports = smallestMissingPositiveInteger;
 
