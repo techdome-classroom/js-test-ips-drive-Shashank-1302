@@ -8,14 +8,14 @@ function smallestMissingPositiveInteger(nums) {
     correctIndex = Math.max(Math.min(correctIndex, n - 1), 0);
 
     // Swap the element with the element at its correct index
-    if (arr[i] !== arr[correctIndex]) {
-      [arr[i], arr[correctIndex]] = [arr[correctIndex], arr[i]];
+    if (nums[i] !== nums[correctIndex]) {
+      [nums[i], nums[correctIndex]] = [nums[correctIndex], nums[i]];
     }
   }
 
   // Find the first element that doesn't correspond with its index.
   for (let i = 0; i < n; i++) {
-    if (arr[i] !== i) {
+    if (nums[i] !== i) {
       return i + 1;
     }
   }
