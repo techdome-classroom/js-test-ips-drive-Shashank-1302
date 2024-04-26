@@ -3,7 +3,7 @@ const charIndexMap = {};
   let left = 0;
   let maxLen = 0;
 
-  for (let right = 0; right < s.length; right++) {
+  for (int right = 0; right < s.length; right++) {
     const currentChar = s[right];
     if (charIndexMap.hasOwnProperty(currentChar) && charIndexMap[currentChar] >= left) {
       left = Math.max(left, charIndexMap[currentChar] + 1);
