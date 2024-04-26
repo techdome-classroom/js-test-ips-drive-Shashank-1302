@@ -3,7 +3,6 @@ function smallestMissingPositiveInteger(nums) {
 
   const n = nums.length;
   for (let i = 0; i < n; i++) {
-    // Check if the current number is within the range (1 to n) and is not at its correct position
     while (0 <= nums[i] < n && nums[i] != i) {
       // Swap the number with the value at its correct index
       const temp = nums[i];
