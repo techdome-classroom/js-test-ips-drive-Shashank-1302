@@ -1,23 +1,24 @@
-function smallestMissingPositiveInteger(nums) {
+Function longestSubstring(s) {
+  // Handle empty string case
+  if (!s) return 0;
 
-    const n = nums.length;
-    for (let i = 0; i < n; i++) {
-      while (0 <= nums[i] < n && nums[i] != i && nums[i] !== 0) {
-        const temp = nums[i];
-        nums[i] = nums[temp];
-        i = temp;
-      }
+  let longest = 0;
+  let left = 0;
+  const charSet = new Set();
+
+  for (let right = 0; right < s.length; right++) {
+    const currentChar = s[right];
+
+    while (charSet.has(currentChar)) {
+      charSet.delete(s[left]);
+      left++;
     }
-  
-    for (let i = 0; i < n; i++) {
-      if (nums[i] != i + 1) {
-        return i + 1;
-      }
-    }
-  
-    return n + 1;
+
+    charSet.add(currentChar);
+
+    longest = Math.max(longest, right - left + 1);
   }
 
-  
-  module.exports = smallestMissingPositiveInteger;
-
+  return longest;
+}
+module.exports = { longestSubstring };
